@@ -8,7 +8,7 @@ This study presents a comprehensive evaluation of a deep learning-based plane de
 To rigorously assess the model's efficacy, we conducted a series of 36 experiments, varying key factors such as image resolution, model architecture, and network size. Each experiment was designed to evaluate the model’s performance under different conditions, ultimately identifying the configuration that delivers the best results for plane detection in satellite imagery. **For detailed results and a comprehensive analysis of all experiments, please refer to the [Experiments Spreadsheet](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/4-Comprehensive%20Inference/Inference%20Results.xlsx).**
 
 ### Methodology
-Each Very High Resolution (VHR) satellite image has a spatial resolution of 0.31m, sourced from Google Satellites. To analyze the model's performance at various scales, each image was segmented into three levels of granularity:
+Each Very High Resolution (VHR) satellite image has a spatial resolution of 0.31m, sourced from Google Satellites. The original image has a resolution of 8000x8000 pixels. To analyze the model's performance at various scales, each image was segmented into three levels of granularity:
 - **Level 1:** A single large image covering the airport area.
 - **Level 2:** Four sections subdividing the original image.
 - **Level 3:** Sixteen smaller sections for a finer-grain analysis.
