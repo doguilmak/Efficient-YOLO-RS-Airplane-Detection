@@ -121,18 +121,6 @@ The study used **VHR satellite imagery** with a spatial resolution of **0.31m** 
 
 The **YOLOv8x model**, previously trained on the HRPlanes dataset, was utilized for the inference process. The model was tested with input sizes of **640x640** and **960x960** pixels to evaluate how varying image resolutions impacted detection accuracy. Key performance metrics such as **precision**, **recall**, **F1 score**, and **mean average precision (mAP)** were recorded at both **mAP50** and **mAP50-95** thresholds.
 
-### Key Findings
-The results revealed substantial variations in performance depending on the airport, image granularity, and resolution:
-- **Top Performance:** 
-  - **Experiment 32 (PEK/ZBAA, Level 2, 960x960)** achieved near-perfect detection with an **F1 score of 0.9992**, **precision of 0.9984**, and perfect **recall (1.0000)**, demonstrating the model’s robust detection capabilities.
-  - **Experiment 34 (PEK/ZBAA, Level 1, 1280x1280)** also produced exceptional results with an **F1 score of 0.9991**, **precision of 1.0000**, and **high recall (0.9982)**.
-- **Lower Performance:**
-  - **ORD/KORD (Level 1, 640x640)** showed reduced performance with an **F1 score of 0.7388** and **recall of 0.6047**, detecting only 68 out of 129 airplanes. This drop in performance was likely due to the limitations of lower-resolution images and visibility constraints.
-  - Similar challenges were observed at **PEK/ZBAA (Level 1, 640x640)**, where **precision dropped to 0.7778**.
-
-- **Granularity Insights:**
-  - The finer granularity levels (Level 2 and Level 3) showed superior detection accuracy, where individual airplanes were more distinguishable. In contrast, larger image sections (Level 1) led to challenges such as **partial airplane occlusion** or **double tagging**, which affected the precision of the detection.
-
 <br>
 
 ### Access to the Details
