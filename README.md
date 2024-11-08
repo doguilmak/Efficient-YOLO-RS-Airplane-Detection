@@ -65,7 +65,7 @@ The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.
 
 The YOLOv8 models were extensively trained and evaluated on the **HRPlanes dataset** to understand their performance across various configurations. We employed three different variants of YOLOv8: **YOLOv8x**, **YOLOv8l**, and **YOLOv8s**, with training conducted under controlled conditions over **100 epochs**, a fixed learning rate of **0.001**, and a batch size of **16**. A total of **36 experiments** were executed, exploring a wide range of hyperparameter combinations including optimizers such as **SGD**, **Adam**, and **AdamW**. Additionally, the models were tested using different image resolutions (640x640 and 960x960) and augmentation techniques (e.g., adjustments to hue, saturation, value, and mosaic).
 
-The results indicated that models trained with **960x960 resolution** consistently outperformed their smaller counterparts, achieving higher mAP50-95 scores, particularly surpassing a value of **0.898**. Among the optimizers, **AdamW** was found to be the most effective, particularly for the larger variants YOLOv8l and YOLOv8x, delivering the best performance in terms of **mAP**, **precision**, and **recall** while reducing false positives. The **top six models** from these experiments were selected based on a comprehensive analysis of **mAP** and **F1 scores**. These models were then made available for download, offering a benchmark for further research and application. For a complete overview of these models and their configurations, please refer to [Table 1](https://github.com/doguilmak/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training) for further details.
+The results indicated that models trained with **960x960 resolution** consistently outperformed their smaller counterparts, achieving higher mAP50-95 scores, particularly surpassing a value of **0.898**. Among the optimizers, **AdamW** was found to be the most effective, particularly for the larger variants YOLOv8l and YOLOv8x, delivering the best performance in terms of **mAP**, **precision**, and **recall** while reducing false positives. The **top six models** from these experiments were selected based on a comprehensive analysis of **mAP** and **F1 scores**. These models were then made available for download, offering a benchmark for further research and application. For a complete overview of these models and their configurations, please refer to [Table 1](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training) for further details.
 
 ### YOLOv9e Models
 
@@ -105,7 +105,7 @@ These results demonstrate that **transfer learning** effectively boosts model pe
 
 ### Access to the Details
 
-To examine the detailed experimental setup, model configurations, and complete results of the transfer learning process, please refer to the full documentation available in the **[3-Transfer Learning](https://github.com/doguilmak/Comprehensive-YOLO-Airplane-Detection/tree/main/3-Transfer%20Learning).**
+To examine the detailed experimental setup, model configurations, and complete results of the transfer learning process, please refer to the full documentation available in the **[3-Transfer Learning](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/3-Transfer%20Learning).**
 
 <br>
 
