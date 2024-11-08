@@ -59,7 +59,7 @@ The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.
 
 <br>
 
-## Results
+## Experiment Results
 
 ### YOLOv8 Models
 
