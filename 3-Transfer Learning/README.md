@@ -15,6 +15,8 @@ Following the previous experiments, a transfer learning approach was adopted by 
 | 32 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW | 0.9250 | 0.9499 | 0.9013 | 0.9425| 0.5678 | [Download](https://link-to-weights.com/) |
 | 30 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9352 | 0.9586 | 0.9130 | 0.9505| 0.5824 | [Download](https://link-to-weights.com/) |
 
+**Note:** Augmentation parameters include Hue (0.015), Saturation (0.7), Value (0.4), and Mosaic (1). For experiments without augmentation, all parameters are set to 0.
+
 The comparison between the previous and current performance results highlights substantial improvements in model performance after applying transfer learning. For the YOLOv8x model, which initially had an F1 score of 0.8167, precision of 0.9033, and recall of 0.7453, transfer learning led to significant enhancements across all metrics. The F1 score increased by 11.3%, reaching 0.9333, while precision rose by 6.0% to 0.9579, and recall improved by 22.1%, reaching 0.9100. Similarly, mAP50 increased by 12.6%, from 0.8441 to 0.9503, and mAP50-95 saw a 31.8% gain, rising from 0.4499 to 0.5931. These improvements clearly demonstrate that transfer learning enhanced the model's ability to generalize and boosted its overall detection performance.
 
 <br>
