@@ -55,7 +55,7 @@ Using the validation split of the CORS-ADD-HBB subset, we evaluated our models' 
 
 ## Experimental Setup
 
-The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/2-Training/GPU/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf)** GPU, which is equipped with 40GB of HBM2 memory and a memory bandwidth of 1,555 GB/s. This GPU supports 19.5 TFLOPS for both FP64 Tensor Core and FP32 computations and operates with a maximum thermal design power (TDP) of 400W (NVIDIA, 2021). The training environment was set up on Google Colab, utilizing CUDA version 12.2 to leverage GPU acceleration for model training and evaluation tasks.
+The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/2-Training/GPU/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf)** GPU, which is equipped with 40GB of HBM2 memory and a memory bandwidth of 1,555 GB/s. This GPU supports 19.5 TFLOPS for both FP64 Tensor Core and FP32 computations and operates with a maximum thermal design power (TDP) of 400W. The training environment was set up on Google Colab, utilizing CUDA version 12.2 to leverage GPU acceleration for model training and evaluation tasks.
 
 <br>
 
