@@ -43,7 +43,7 @@ To evaluate the performance differences between YOLOv8 and the "e" variant of th
 
 <br>
 
-##  Evaluation on CORS-ADD Dataset
+##  Generalization Using the CORS-ADD Dataset
 
 We utilized the validation dataset from the CORS-ADD dataset to evaluate our HRPlanes-trained models without any prior training on CORS-ADD data. This approach allowed us to assess how well our models generalize to new datasets. Using the validation split of the CORS-ADD-HBB subset, we evaluated the performance of the top three YOLOv8 models and the top three YOLOv9e models. The HBB format was employed for annotating aircraft, providing a structured framework for detection.
 
