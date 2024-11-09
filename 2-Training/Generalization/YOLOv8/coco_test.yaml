@@ -1,0 +1,8 @@
+train: /gdrive/MyDrive/Datasets/HRPlanes_ds/train
+val: /gdrive/MyDrive/Datasets/HRPlanes/YOLOV8/CORS_AD_HBB/val
+
+# number of classes
+nc: 1
+
+# class names
+names: ['plane']
