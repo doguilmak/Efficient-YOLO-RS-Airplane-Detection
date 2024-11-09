@@ -73,7 +73,7 @@ To assess potential improvements in performance, the **YOLOv9e** architecture wa
 
 Overall, YOLOv9e models achieved **competitive performance**, with **SGD** optimization and augmentation yielding the highest results in terms of **F1 Score**, **precision**, and **recall**. Notably, the YOLOv9e model with **augmentation** performed slightly better than the corresponding model without, suggesting that incorporating augmentation can enhance the generalization capabilities of the network. A detailed performance comparison of the YOLOv9e models can be found in [Table 2](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training).
 
-### Evaluation on CORS-ADD Dataset
+### Generalization Using the CORS-ADD Dataset
 
 In addition to the primary experiments on the HRPlanes dataset, we conducted a evaluation using the **CORS-ADD dataset**. This evaluation tested how well the HRPlanes-trained models could generalize to a completely different dataset, without prior exposure to CORS-ADD data. The models were evaluated on the **CORS-ADD-HBB subset** using the **HBB annotation format**, and we focused on the top-performing YOLOv8 and YOLOv9e models.
 
