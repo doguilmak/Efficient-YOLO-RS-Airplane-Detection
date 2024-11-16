@@ -44,5 +44,5 @@ The study illustrates the effectiveness of combining advanced deep learning mode
 
 <img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/IST_Exp12.png" alt="Detection results at IST"/>
 
-In just **19.71 seconds**, with a network size of **800x960**, out of 93 planes in the scene, **86 planes** were successfully detected at Istanbul Airport (IST) along with their precise geographic coordinates as WGS 84 coordinate reference system (CRS).
+In just **19.71 seconds**, with a network size of **800x960**, out of 93 planes in the scene, **86 planes** were successfully detected at Istanbul Airport (IST) along with their precise geographic coordinates as **WGS 84** coordinate reference system (CRS).
 
