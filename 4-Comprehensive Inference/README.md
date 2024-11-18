@@ -13,7 +13,7 @@ Each Very High Resolution (VHR) satellite image has a spatial resolution of 0.31
 - **Level 2:** Four sections subdividing the original image.
 - **Level 3:** Sixteen smaller sections for a finer-grain analysis.
 
-The inference utilized the best-performing model, YOLOv8x, trained on the HRPlanes dataset. This model was evaluated with input sizes of 640x640 and 960x960 pixels to determine how image resolution impacts detection performance. Key metrics, including precision, recall, F1 score, and mean average precision (mAP) at thresholds of mAP50 and mAP50-95, were recorded to quantify detection accuracy.
+The inference utilized the best-performing model, YOLOv8x, trained on the HRPlanes dataset. This model was evaluated with input sizes of 640x640, 960x960, and 1280x1280 pixels to determine how image resolution impacts detection performance. Key metrics, including precision, recall, F1 score, and mean average precision (mAP) at thresholds of mAP50 and mAP50-95, were recorded to quantify detection accuracy.
 
 <img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/ci_ORD.png" alt="Comprehensive Inference for Large Input Images"/>
 
