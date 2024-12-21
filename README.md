@@ -7,7 +7,7 @@ This repository includes weights and evaluation metrics for a range of YOLO arch
 
 ## Updates
 
-**Comparative Assessment of YOLO Architectures for Airplane Detection Using VHR Satellite Imagery article is now available!**  
+**Exploring YOLOv8 and YOLOv9 for Efficient Airplane Detection in Remote Sensing Imagery article is now available!**  
 Explore and utilize these datasets to enhance your deep learning projects for airplane detection.
 
 <details>
