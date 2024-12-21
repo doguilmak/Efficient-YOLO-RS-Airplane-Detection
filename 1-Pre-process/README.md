@@ -1,5 +1,5 @@
 
-<img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
+<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
 
 <br>
 
@@ -24,7 +24,7 @@ The next step involved organizing the data into the `train`, `validation`, and `
 
 By following this process, we ensured that each subset (train, validation, and test) contains the correct images and their associated label files, making the dataset ready for model training.
 
-<img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/no_of_bbox_per_image_train.png"/>
+<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/no_of_bbox_per_image_train.png"/>
 
 The histogram provides an overview of the dataset's diversity in terms of object density within images. A dataset with a wide range of bounding box counts per image indicates varying degrees of object complexity, from images containing a few prominent objects to densely populated scenes with numerous objects of interest. Understanding this diversity aids in selecting appropriate model architectures and optimization strategies tailored to handle different levels of object density. Additionally, the histogram highlights potential outliers or anomalies in the dataset. Unusually high or low counts of bounding boxes per image may indicate data quality issues, such as annotation errors, missing annotations, or inconsistencies in labeling conventions. Identifying and addressing these anomalies is crucial for ensuring the robustness and reliability of trained models.
 
