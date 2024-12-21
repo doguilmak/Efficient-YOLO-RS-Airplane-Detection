@@ -1,11 +1,11 @@
 
-<img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
+<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
 
 <br>
 
 ## YOLOv8 Models
 
-The YOLOv8 training involved extensive experiments to assess different variants and optimization algorithms under controlled conditions. Each model was trained for **100 epochs** with a **fixed learning rate of 0.001** and a **batch size of 16**, using the **YOLOv8x**, **YOLOv8l**, and **YOLOv8s** variants. A total of **36** experiments tested various hyperparameter combinations, employing the optimizers **SGD**, **Adam**, and **AdamW**. Training data consisted of high-resolution satellite images, resized to **640x640** and **960x960** pixels, with adjustments made for color settings such as **hue**, **saturation**, **value**, and **mosaic**. Results indicated that models with a larger network size (960x960) consistently outperformed smaller variants across all metrics, particularly in mAP50-95, achieving values above 0.898. AdamW emerged as the most effective optimizer, yielding lower false positives and superior performance in YOLOv8l and YOLOv8x. **For detailed results and a comprehensive analysis of all experiments, please refer to the [Experiments Spreadsheet](https://github.com/doguilmak/Comprehensive-YOLO-Airplane-Detection/blob/main/2-Training/Experiments.xlsx).**
+The YOLOv8 training involved extensive experiments to assess different variants and optimization algorithms under controlled conditions. Each model was trained for **100 epochs** with a **fixed learning rate of 0.001** and a **batch size of 16**, using the **YOLOv8x**, **YOLOv8l**, and **YOLOv8s** variants. A total of **36** experiments tested various hyperparameter combinations, employing the optimizers **SGD**, **Adam**, and **AdamW**. Training data consisted of high-resolution satellite images, resized to **640x640** and **960x960** pixels, with adjustments made for color settings such as **hue**, **saturation**, **value**, and **mosaic**. Results indicated that models with a larger network size (960x960) consistently outperformed smaller variants across all metrics, particularly in mAP50-95, achieving values above 0.898. AdamW emerged as the most effective optimizer, yielding lower false positives and superior performance in YOLOv8l and YOLOv8x. **For detailed results and a comprehensive analysis of all experiments, please refer to the [Experiments Spreadsheet](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/2-Training/Experiments.xlsx).**
 
 <br>
 
@@ -84,4 +84,4 @@ To complement the evaluation results, the accompanying figure presents a visual 
 
 This figure illustrates the performance of both models across various aircraft types and challenging conditions. YOLOv8x predictions closely align with ground truth, exhibiting high precision with fewer false positives and negatives. The YOLOv9e predictions are also effective but show subtle differences in bounding box placement, particularly in edge cases. This highlights the generalization capabilities of both models while revealing slight performance differences.
 
-<img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/gt_v8_v9_cropped.png" alt="HRPlanes and CORS-ADD Dataset Samples"/>
+<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/gt_v8_v9_cropped.png" alt="HRPlanes and CORS-ADD Dataset Samples"/>
