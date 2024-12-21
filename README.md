@@ -1,5 +1,5 @@
 
-<img src="https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
+<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
 
 <br>
 
@@ -55,7 +55,7 @@ Using the validation split of the CORS-ADD-HBB subset, we evaluated our models' 
 
 ## Experimental Setup
 
-The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/2-Training/GPU/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf)** GPU, which is equipped with 40GB of HBM2 memory and a memory bandwidth of 1,555 GB/s. This GPU supports 19.5 TFLOPS for both FP64 Tensor Core and FP32 computations and operates with a maximum thermal design power (TDP) of 400W. The training environment was set up on Google Colab, utilizing CUDA version 12.2 to leverage GPU acceleration for model training and evaluation tasks.
+The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/2-Training/GPU/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf)** GPU, which is equipped with 40GB of HBM2 memory and a memory bandwidth of 1,555 GB/s. This GPU supports 19.5 TFLOPS for both FP64 Tensor Core and FP32 computations and operates with a maximum thermal design power (TDP) of 400W. The training environment was set up on Google Colab, utilizing CUDA version 12.2 to leverage GPU acceleration for model training and evaluation tasks.
 
 <br>
 
@@ -65,25 +65,25 @@ The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.
 
 The YOLOv8 models were extensively trained and evaluated on the **HRPlanes dataset** to understand their performance across various configurations. We employed three different variants of YOLOv8: **YOLOv8x**, **YOLOv8l**, and **YOLOv8s**, with training conducted under controlled conditions over **100 epochs**, a fixed learning rate of **0.001**, and a batch size of **16**. A total of **36 experiments** were executed, exploring a wide range of hyperparameter combinations including optimizers such as **SGD**, **Adam**, and **AdamW**. Additionally, the models were tested using different image resolutions (640x640 and 960x960) and augmentation techniques (e.g., adjustments to hue, saturation, value, and mosaic).
 
-The results indicated that models trained with **960x960 resolution** consistently outperformed their smaller counterparts, achieving higher mAP50-95 scores, particularly surpassing a value of **0.898**. Among the optimizers, **AdamW** was found to be the most effective, particularly for the larger variants YOLOv8l and YOLOv8x, delivering the best performance in terms of **mAP**, **precision**, and **recall** while reducing false positives. The **top six models** from these experiments were selected based on a comprehensive analysis of **mAP** and **F1 scores**. These models were then made available for download, offering a benchmark for further research and application. For a complete overview of these models and their configurations, please refer to [Table 1](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training) for further details.
+The results indicated that models trained with **960x960 resolution** consistently outperformed their smaller counterparts, achieving higher mAP50-95 scores, particularly surpassing a value of **0.898**. Among the optimizers, **AdamW** was found to be the most effective, particularly for the larger variants YOLOv8l and YOLOv8x, delivering the best performance in terms of **mAP**, **precision**, and **recall** while reducing false positives. The **top six models** from these experiments were selected based on a comprehensive analysis of **mAP** and **F1 scores**. These models were then made available for download, offering a benchmark for further research and application. For a complete overview of these models and their configurations, please refer to [Table 1](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training) for further details.
 
 ### YOLOv9e Models
 
 To assess potential improvements in performance, the **YOLOv9e** architecture was evaluated in parallel with YOLOv8, testing several optimizers and augmentation strategies. The experiments were conducted using a **640x640** resolution, consistent with the YOLOv8 trials for a fair comparison. Each model was trained for **100 epochs** under identical conditions (learning rate = 0.001, batch size = 16), allowing for an in-depth comparison of the two architectures.
 
-Overall, YOLOv9e models achieved **competitive performance**, with **SGD** optimization and augmentation yielding the highest results in terms of **F1 Score**, **precision**, and **recall**. Notably, the YOLOv9e model with **augmentation** performed slightly better than the corresponding model without, suggesting that incorporating augmentation can enhance the generalization capabilities of the network. A detailed performance comparison of the YOLOv9e models can be found in [Table 2](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training).
+Overall, YOLOv9e models achieved **competitive performance**, with **SGD** optimization and augmentation yielding the highest results in terms of **F1 Score**, **precision**, and **recall**. Notably, the YOLOv9e model with **augmentation** performed slightly better than the corresponding model without, suggesting that incorporating augmentation can enhance the generalization capabilities of the network. A detailed performance comparison of the YOLOv9e models can be found in [Table 2](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training).
 
 ### Generalization Using the CORS-ADD Dataset
 
 In addition to the primary experiments on the HRPlanes dataset, we conducted a evaluation using the **CORS-ADD dataset**. This evaluation tested how well the HRPlanes-trained models could generalize to a completely different dataset, without prior exposure to CORS-ADD data. The models were evaluated on the **CORS-ADD-HBB subset** using the **HBB annotation format**, and we focused on the top-performing YOLOv8 and YOLOv9e models.
 
-The results demonstrated that the models retained their performance capabilities when applied to new data, exhibiting **high precision** and **robust detection** capabilities across different conditions. Notably, the **YOLOv8x** model with the **SGD optimizer** emerged as the most effective configuration in this cross-dataset evaluation, outperforming other models in terms of **F1 score**, **precision**, and **mAP**.  For a detailed performance breakdown of the top YOLOv8 and YOLOv9e models on the CORS-ADD dataset, please refer to [Tables 3 and 4](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training).
+The results demonstrated that the models retained their performance capabilities when applied to new data, exhibiting **high precision** and **robust detection** capabilities across different conditions. Notably, the **YOLOv8x** model with the **SGD optimizer** emerged as the most effective configuration in this cross-dataset evaluation, outperforming other models in terms of **F1 score**, **precision**, and **mAP**.  For a detailed performance breakdown of the top YOLOv8 and YOLOv9e models on the CORS-ADD dataset, please refer to [Tables 3 and 4](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training).
 
 <br>
 
 ### Access to the Details
 
-For those interested in a deeper analysis, all experimental configurations, results, and detailed performance metrics have been documented and made available through a comprehensive **[spreadsheet of experiment results](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/blob/main/2-Training/Experiments.xlsx)**. This document contains all the specifics of the experiments conducted, including model hyperparameters, optimizer settings, and corresponding performance metrics, offering full transparency into the experimental process. Here you can find all the details about the training process: **[2-Training](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/2-Training).**
+For those interested in a deeper analysis, all experimental configurations, results, and detailed performance metrics have been documented and made available through a comprehensive **[spreadsheet of experiment results](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/2-Training/Experiments.xlsx)**. This document contains all the specifics of the experiments conducted, including model hyperparameters, optimizer settings, and corresponding performance metrics, offering full transparency into the experimental process. Here you can find all the details about the training process: **[2-Training](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training).**
 
 <br>
 
@@ -105,7 +105,7 @@ These results demonstrate that **transfer learning** effectively boosts model pe
 
 ### Access to the Details
 
-To examine the detailed experimental setup, model configurations, and complete results of the transfer learning process, please refer to the full documentation available in the **[3-Transfer Learning](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/3-Transfer%20Learning).**
+To examine the detailed experimental setup, model configurations, and complete results of the transfer learning process, please refer to the full documentation available in the **[3-Transfer Learning](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/3-Transfer%20Learning).**
 
 <br>
 
@@ -125,7 +125,7 @@ The **YOLOv8x model**, previously trained on the HRPlanes dataset, was utilized 
 
 ### Access to the Details
 
-For a more detailed look at the experimental setup, performance results, and the impact of image resolution and granularity on airplane detection accuracy, please refer to the full documentation available in the **[4-Comprehensive Inference](https://github.com/RSandAI/Comprehensive-YOLO-Airplane-Detection/tree/main/4-Comprehensive%20Inference)**.
+For a more detailed look at the experimental setup, performance results, and the impact of image resolution and granularity on airplane detection accuracy, please refer to the full documentation available in the **[4-Comprehensive Inference](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/4-Comprehensive%20Inference)**.
 
 <br>
 
