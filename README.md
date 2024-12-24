@@ -41,7 +41,7 @@ The imagery required for the dataset was obtained from Google Earth. We download
 
 #### Download The Dataset
 
-The complete HRPlanes dataset is available in YOLO format. Access the dataset on [Google Drive](https://drive.google.com/drive/folders/1NYji6HWh4HRLQMTagsn4tTv4LOdDrc9P?usp=sharing) to explore airplane annotations across various global airports.
+The complete HRPlanes dataset is available in YOLO format. Access the dataset on [Zenodo](https://zenodo.org/records/14546832) to explore airplane annotations across various global airports.
 
 <br>
 
