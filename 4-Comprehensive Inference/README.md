@@ -32,16 +32,16 @@ The results indicate that model performance varied significantly across differen
 
 **Table 7. Top 6 Results of the Comprehensive Inference**
 
-| Exp. No | IATA/ICAO Code | Image Level | Network Size | Number of Airplanes (GT) | Number of Airplanes (Inference) | F1 Score | Precision | Recall | mAP50 | mAP50-95 |
-|---------|-----------------|-------------|--------------|--------------------------|---------------------------------|----------|-----------|--------|-------|----------|
-| 32      | PEK/ZBAA        | 2           | 960x960      | 31                       | 31                              | 0.9992   | 0.9984    | 1      | 0.995 | 0.7854   |
-| 34      | PEK/ZBAA        | 1           | 1280x1280    | 31                       | 30                              | 0.9991   | 1         | 0.9982 | 0.995 | 0.7741   |
-| 25      | AMS/EHAM        | 1           | 1280x1280    | 74                       | 74                              | 0.9931   | 0.9862    | 1      | 0.9947 | 0.8303   |
-| 6       | ORD/KORD        | 3           | 960x960      | 131                      | 126                             | 0.9876   | 1         | 0.9754 | 0.9911 | 0.8044   |
-| 13      | HND/RJTT        | 1           | 960x960      | 61                       | 60                              | 0.9899   | 0.9963    | 0.9836 | 0.9944 | 0.7617   |
-| 17      | HND/RJTT        | 2           | 1280x1280    | 64                       | 61                              | 0.9837   | 1         | 0.9678 | 0.9833 | 0.8113   |
+| Exp. No | IATA/ICAO Code | Image Level | Network Size | Number of Airplanes (GT) | Number of Airplanes (Inference) | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Inference Time (as ms) |
+|---------|-----------------|-------------|--------------|--------------------------|---------------------------------|----------|-----------|--------|-------|----------|----------|
+| 32      | PEK/ZBAA        | 2           | 960x960      | 31                       | 31                              | 0.9992   | 0.9984    | 1      | 0.995 | 0.7854   | 605.2 |
+| 34      | PEK/ZBAA        | 1           | 1280x1280    | 31                       | 30                              | 0.9991   | 1         | 0.9982 | 0.995 | 0.7741   | 307.0 |
+| 25      | AMS/EHAM        | 1           | 1280x1280    | 74                       | 74                              | 0.9931   | 0.9862    | 1      | 0.9947 | 0.8303   | 300.1 |
+| 6       | ORD/KORD        | 3           | 960x960      | 131                      | 126                             | 0.9876   | 1         | 0.9754 | 0.9911 | 0.8044   | 2096.0 |
+| 13      | HND/RJTT        | 1           | 960x960      | 61                       | 60                              | 0.9899   | 0.9963    | 0.9836 | 0.9944 | 0.7617   | 202.0 |
+| 17      | HND/RJTT        | 2           | 1280x1280    | 64                       | 61                              | 0.9837   | 1         | 0.9678 | 0.9833 | 0.8113   | 1036.4 |
 
 
-*Note: Full results are provided for all experiments, capturing the impact of image granularity, resolution, and model input size on airplane detection accuracy.*
+*Note: Full results are provided for all experiments, capturing the impact of image, resolution, and model input size on airplane detection accuracy.*
 
 These findings underline the importance of image resolution and granularity in VHR imagery analysis, suggesting that finer subdivisions and higher resolutions are more effective for accurate object detection in large-scale images.
