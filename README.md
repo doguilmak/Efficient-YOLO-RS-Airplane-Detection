@@ -61,6 +61,12 @@ The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.
 
 ## Results
 
+<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/flow_chart.png" alt="Flow Chart"/>
+
+The flowchart outlines a structured approach for airplane detection using deep learning models. It consists of four main stages: [Preprocess](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/1-Pre-process), where HRPlanes data is prepared and hyperparameters are tuned; [Train and Evaluate](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training) Models, where YOLOv8 and YOLOv9 models are trained and compared; [Transfer Learning](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/3-Transfer%20Learning), which involves testing top-performing models on the CORS-ADD dataset to assess generalization; and [Comprehensive Inference](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/4-Comprehensive%20Inference), where models are validated on real-world satellite images to ensure reliability in various applications.
+
+<br>
+
 ### YOLOv8 Models
 
 The YOLOv8 models were extensively trained and evaluated on the **HRPlanes dataset** to understand their performance across various configurations. We employed three different variants of YOLOv8: **YOLOv8x**, **YOLOv8l**, and **YOLOv8s**, with training conducted under controlled conditions over **100 epochs**, a fixed learning rate of **0.001**, and a batch size of **16**. A total of **36 experiments** were executed, exploring a wide range of hyperparameter combinations including optimizers such as **SGD**, **Adam**, and **AdamW**. Additionally, the models were tested using different image resolutions (640x640 and 960x960) and augmentation techniques (e.g., adjustments to hue, saturation, value, and mosaic).
