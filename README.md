@@ -73,6 +73,8 @@ In this phase, we prepared the dataset for YOLO-based airplane detection by orga
 
 We ensured proper dataset distribution by splitting data based on predefined lists (`train.txt`, `validation.txt`, `test.txt`). A histogram was generated to analyze bounding box distribution, helping identify variations in object density and potential annotation inconsistencies. Finally, all pre-processed data was validated and stored in Google Drive, ensuring readiness for model training.
 
+<br>
+
 ### Access to the Details  
 
 For a comprehensive explanation of the dataset preparation, including file structuring, dataset splitting, and verification steps, please refer to the full documentation available in **[1-Preprocess](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/1-Pre-process).**
