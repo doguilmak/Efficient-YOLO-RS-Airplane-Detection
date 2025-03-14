@@ -59,13 +59,27 @@ The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.
 
 <br>
 
-## Results
+## Flowchart
 
 <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/flow_chart.png" alt="Flow Chart"/>
 
 The flowchart outlines a structured approach for airplane detection using deep learning models. It consists of four main stages: [Preprocess](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/1-Pre-process), where HRPlanes data is prepared and hyperparameters are tuned; [Train and Evaluate](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training) Models, where YOLOv8 and YOLOv9 models are trained and compared; [Transfer Learning](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/3-Transfer%20Learning), which involves testing top-performing models on the CORS-ADD dataset to assess generalization; and [Comprehensive Inference](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/4-Comprehensive%20Inference), where models are validated on real-world satellite images to ensure reliability in various applications.
 
 <br>
+
+## 1. Preprocess  
+
+In this phase, we prepared the dataset for YOLO-based airplane detection by organizing images and labels into **train**, **validation**, and **test** sets. Each set contains **images/** (for `.jpg` files) and **labels/** (for `.txt` annotations).  
+
+We ensured proper dataset distribution by splitting data based on predefined lists (`train.txt`, `validation.txt`, `test.txt`). A histogram was generated to analyze bounding box distribution, helping identify variations in object density and potential annotation inconsistencies. Finally, all pre-processed data was validated and stored in Google Drive, ensuring readiness for model training.
+
+### Access to the Details  
+
+For a comprehensive explanation of the dataset preparation, including file structuring, dataset splitting, and verification steps, please refer to the full documentation available in **[1-Preprocess](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/1-Pre-process).**
+
+<br>
+
+## 2. Training
 
 ### YOLOv8 Models
 
@@ -93,7 +107,7 @@ For those interested in a deeper analysis, all experimental configurations, resu
 
 <br>
 
-## Transfer Learning Using CORS-ADD Dataset
+## 3. Transfer Learning Using CORS-ADD Dataset
 
 In this section, we explore the use of **transfer learning** to enhance the generalization capability of our models, specifically for **aircraft detection** using the CORS-ADD dataset. Transfer learning allows us to take advantage of previously trained models on the HRPlanes dataset and fine-tune them for optimal performance on the CORS-ADD dataset, which contains different characteristics and challenges.
 
@@ -115,7 +129,7 @@ To examine the detailed experimental setup, model configurations, and complete r
 
 <br>
 
-## Comprehensive Inference for Large Input Images
+## 4. Comprehensive Inference for Large Input Images
 
 This section presents a thorough evaluation of the performance of a deep learning-based airplane detection model using **Very High Resolution (VHR)** satellite imagery from four major international airports: **Chicago O'Hare International Airport (ORD/KORD)**, **Amsterdam Schiphol Airport (AMS/EHAM)**, **Beijing Capital International Airport (PEK/ZBAA)**, and **Haneda International Airport (HND/RJTT)**. These airports were selected based on their high air traffic volume, availability of high-resolution imagery, and diversity in geographical and operational conditions. This ensures a comprehensive analysis of the model's performance across varied environments and operational scenarios.
 
