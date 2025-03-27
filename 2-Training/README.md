@@ -15,12 +15,12 @@ The YOLOv8 training involved extensive experiments to assess different variants 
 
 | Experiment ID | Model    | Hyperparameters                                                                                   | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
 |----------|----------|---------------------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|------------------|
-| 12 | YOLOv8x  | Network size: 960x960<br>with Augmentation<br>Optimizer: SGD     | 0.9932   | 0.9915 | 0.9950 | 0.9939 | 0.8990 | [Download](https://link-to-weights.com/) |
-| 32 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9930   | 0.9927 | 0.9933 | 0.9936 | 0.9025 | [Download](https://link-to-weights.com/) |
-| 30 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: SGD     | 0.9922   | 0.9903 | 0.9940 | 0.9941 | 0.9021 | [Download](https://link-to-weights.com/) |
-| 28 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: Adam    | 0.9921   | 0.9915 | 0.9928 | 0.9940 | 0.9018 | [Download](https://link-to-weights.com/) |
-| 14 | YOLOv8x  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9920   | 0.9915 | 0.9924 | 0.9938 | 0.9020 | [Download](https://link-to-weights.com/) |
-| 50 | YOLOv8s  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9918   | 0.9934 | 0.9903 | 0.9940 | 0.8983 | [Download](https://link-to-weights.com/) |
+| 12 | YOLOv8x  | Network size: 960x960<br>with Augmentation<br>Optimizer: SGD     | 0.9932   | 0.9915 | 0.9950 | 0.9939 | 0.8990 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-12) |
+| 32 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9930   | 0.9927 | 0.9933 | 0.9936 | 0.9025 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-32) |
+| 30 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: SGD     | 0.9922   | 0.9903 | 0.9940 | 0.9941 | 0.9021 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-30) |
+| 28 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: Adam    | 0.9921   | 0.9915 | 0.9928 | 0.9940 | 0.9018 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-28) |
+| 14 | YOLOv8x  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9920   | 0.9915 | 0.9924 | 0.9938 | 0.9020 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-14) |
+| 50 | YOLOv8s  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9918   | 0.9934 | 0.9903 | 0.9940 | 0.8983 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-50) |
 
 **Note:** Augmentation parameters include Hue (0.015), Saturation (0.7), Value (0.4), and Mosaic (1). For experiments without augmentation, all parameters are set to 0.
 
@@ -36,12 +36,12 @@ To evaluate the performance differences between YOLOv8 and the "e" variant of th
 
 | Experiment ID | Hyperparameters                                                                       | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
 |----------|---------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|---------------|
-| 57 | Network size: 640x640<br>without Augmentation<br>Optimizer: SGD   | 0.9899 | 0.9912 | 0.9886 | 0.9935| 0.8982 | [Download](https://link-to-weights.com/) |
-| 58 | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD      | 0.9917 | 0.9918 | 0.9916 | 0.9937| 0.8989 | [Download](https://link-to-weights.com/) |
-| 59 | Network size: 640x640<br>without Augmentation<br>Optimizer: Adam  | 0.9882 | 0.9864 | 0.9900 | 0.9930| 0.8954 | [Download](https://link-to-weights.com/) |
-| 60 | Network size: 640x640<br>with Augmentation<br>Optimizer: Adam     | 0.9889 | 0.9885 | 0.9894 | 0.9934| 0.8886 | [Download](https://link-to-weights.com/) |
-| 61 | Network size: 640x640<br>without Augmentation<br>Optimizer: AdamW | 0.9880 | 0.9864 | 0.9896 | 0.9930| 0.8954 | [Download](https://link-to-weights.com/) |
-| 62 | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW    | 0.9899 | 0.9891 | 0.9907 | 0.9936| 0.8930 | [Download](https://link-to-weights.com/) |
+| 57 | Network size: 640x640<br>without Augmentation<br>Optimizer: SGD   | 0.9899 | 0.9912 | 0.9886 | 0.9935| 0.8982 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-57) |
+| 58 | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD      | 0.9917 | 0.9918 | 0.9916 | 0.9937| 0.8989 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-58) |
+| 59 | Network size: 640x640<br>without Augmentation<br>Optimizer: Adam  | 0.9882 | 0.9864 | 0.9900 | 0.9930| 0.8954 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-59) |
+| 60 | Network size: 640x640<br>with Augmentation<br>Optimizer: Adam     | 0.9889 | 0.9885 | 0.9894 | 0.9934| 0.8886 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-60) |
+| 61 | Network size: 640x640<br>without Augmentation<br>Optimizer: AdamW | 0.9880 | 0.9864 | 0.9896 | 0.9930| 0.8954 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-61) |
+| 62 | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW    | 0.9899 | 0.9891 | 0.9907 | 0.9936| 0.8930 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-62) |
 
 <br>
 
