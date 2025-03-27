@@ -11,9 +11,9 @@ Following the previous experiments, a transfer learning approach was adopted by 
 
 | Experiment ID | Model   | Hyperparameters                                                                       | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
 |----------|---------|---------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|---------------|
-| 12 | YOLOv8x | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9333 | 0.9579 | 0.9100 | 0.9503| 0.5931 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-12) |
-| 32 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW | 0.9250 | 0.9499 | 0.9013 | 0.9425| 0.5678 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-32) |
-| 30 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9352 | 0.9586 | 0.9130 | 0.9505| 0.5824 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-30) |
+| 12 | YOLOv8x | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9333 | 0.9579 | 0.9100 | 0.9503| 0.5931 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-12) |
+| 32 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW | 0.9250 | 0.9499 | 0.9013 | 0.9425| 0.5678 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-32) |
+| 30 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9352 | 0.9586 | 0.9130 | 0.9505| 0.5824 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-30) |
 
 **Note:** Augmentation parameters include Hue (0.015), Saturation (0.7), Value (0.4), and Mosaic (1). For experiments without augmentation, all parameters are set to 0.
 
@@ -25,9 +25,9 @@ The comparison between the previous and current performance results highlights s
 
 | Experiment ID | Model   | Hyperparameters                                                                       | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
 |----------|---------|---------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|---------------|
-| 58 | YOLOv9e | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD    | 0.9392 | 0.9560 | 0.9230 | 0.9526| 0.5942 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-58) |
-| 57 | YOLOv9e | Network size: 640x640<br>without Augmentation<br>Optimizer: SGD | 0.9304 | 0.9494 | 0.9121 | 0.9471| 0.5773 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-57) |
-| 62 | YOLOv9e | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW  | 0.9088 | 0.9452 | 0.8751 | 0.9255| 0.5239 | [Download](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-62) |
+| 58 | YOLOv9e | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD    | 0.9392 | 0.9560 | 0.9230 | 0.9526| 0.5942 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-58) |
+| 57 | YOLOv9e | Network size: 640x640<br>without Augmentation<br>Optimizer: SGD | 0.9304 | 0.9494 | 0.9121 | 0.9471| 0.5773 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-57) |
+| 62 | YOLOv9e | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW  | 0.9088 | 0.9452 | 0.8751 | 0.9255| 0.5239 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-62) |
 
 The comparison between the two sets of performance results for the YOLOv9e models, before and after applying transfer learning, reveals substantial improvements across most metrics. For the YOLOv9e model with SGD optimizer and data augmentation, the F1 score increased from 0.8169 to 0.9392, a 15.0% improvement. Precision rose from 0.9073 to 0.9560 (5.4%), and recall saw a substantial increase of 24.3%, going from 0.7428 to 0.9230. The mAP50 improved by 16.8%, from 0.8158 to 0.9526, while mAP50-95 saw a significant 41.9% increase, from 0.4188 to 0.5942.
 
