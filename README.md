@@ -3,7 +3,7 @@
 
 <br>
 
-This repository includes weights and evaluation metrics for a range of YOLO architectures trained on high-resolution satellite imagery for airplane detection, utilizing both the HRPlanes and CORS-ADD datasets. The analysis explores both direct training and transfer learning techniques across various YOLO architectures. Models include YOLOv8 and YOLOv9 with training done via Ultralytics, respectively. Below are detailed metrics and download links for each model. Additionally, you can explore our models and work on [Hugging Face 🤗](https://huggingface.co/rsandai/Efficient-YOLO-RS-Airplane-Detection).
+This repository includes weights and evaluation metrics for a range of YOLO architectures trained on high-resolution satellite imagery for airplane detection, utilizing both the HRPlanes and CORS-ADD datasets. The analysis explores both direct training and transfer learning techniques across various YOLO architectures. Models include YOLOv8 and YOLOv9 with training done via Ultralytics, respectively. Below are detailed metrics and download links for each model. Additionally, you can explore our models and work on [Hugging Face 🤗](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection).
 
 ## Updates
 
