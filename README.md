@@ -153,7 +153,7 @@ For a more detailed look at the experimental setup, performance results, and the
 
 ## Citation
 
-If this dataset or model weights benefit your research, please cite our [paper]().
+If this dataset or model weights benefit your research, please cite our paper (DOI: [10.1016/j.engappai.2025.111854](https://doi.org/10.1016/j.engappai.2025.111854)).
 
 <br>
 
