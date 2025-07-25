@@ -15,9 +15,30 @@ Each Very High Resolution (VHR) satellite image has a spatial resolution of 0.31
 
 The inference utilized the best-performing model, YOLOv8x, trained on the HRPlanes dataset. This model was evaluated with input sizes of 640x640, 960x960, and 1280x1280 pixels to determine how image resolution impacts detection performance. Key metrics, including precision, recall, F1 score, and mean average precision (mAP) at thresholds of mAP50 and mAP50-95, were recorded to quantify detection accuracy.
 
-<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/ci_ORD.png" alt="Comprehensive Inference for Large Input Images"/>
+<div align="center">
+  <table style="border-collapse: collapse; border: none; width: 920px;">
+    <tr>
+      <td style="border: none; text-align: center; width: 50%;">
+        <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/Comprehensive_Inference_ORD_zoom_in_1.png" style="max-width: 100%; height: auto;" alt="Comprehensive Inference for Large Input Images"/>
+      </td>
+      <td style="border: none; text-align: center; width: 50%;">
+        <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/Comprehensive_Inference_Heatmap_ORD_zoom_in_1.png" style="max-width: 100%; height: auto;" alt="Comprehensive Inference Heatmap"/>
+      </td>
+    </tr>
+    <tr>
+      <td style="border: none; text-align: center;">
+        <em>Figure 1 — Airplane detection at Chicago O'Hare (ORD) with YOLOv8x using 960×960 input across three image scales (Levels 1–3).</em>
+      </td>
+      <td style="border: none; text-align: center;">
+        <em>Figure 2 — Zoomed-in heatmap view revealing localized airplane activity with higher spatial clarity across three image scales (Levels 1–3).</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
-Figure illustrates the results of airplane detection at Chicago O'Hare International Airport (ORD/KORD) using the YOLOv8x model with a 960x960 pixel network input size. The analysis is performed across three levels of image granularity: Level 1 (a), Level 2 (b), and Level 3 (c).
+Figure 1 illustrates the results of airplane detection at Chicago O'Hare International Airport (ORD/KORD) using the YOLOv8x model with a 960x960 pixel network input size. The analysis is performed across three levels of image granularity: Level 1 (a), Level 2 (b), and Level 3 (c).
+
+In addition, in figure 2, we developed a CAM-like heatmap generation method to support airplane detection analysis using Ultralytics' YOLO-based object tracking. Instead of traditional Class Activation Maps that rely on model gradients, we generated artificial radial gradient masks centered on the bounding boxes of tracked airplanes across video frames. These circular overlays—intense at the center and smoothly fading outward—were accumulated over time to create a spatiotemporal heatmap that visualizes aircraft presence and movement patterns. By blending the heatmap with original frames, we produced an intuitive visualization of high-activity zones without needing access to the model’s internal layers.
 
 <br>
 
