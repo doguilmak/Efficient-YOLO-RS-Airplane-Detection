@@ -1,9 +1,8 @@
-
 <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/image.png" height=450 width=1280 alt=""/>
 
 <br>
 
-This repository includes weights and evaluation metrics for a range of YOLO architectures trained on high-resolution satellite imagery for airplane detection, utilizing both the HRPlanes and CORS-ADD datasets. The analysis explores both direct training and transfer learning techniques across various YOLO architectures. Models include YOLOv8 and YOLOv9 with training done via Ultralytics, respectively. Below are detailed metrics and download links for each model. Additionally, you can explore our models and work on [Hugging Face 🤗](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection).
+This repository provides weights and evaluation metrics for YOLO models trained on high-resolution satellite imagery for airplane detection using the HRPlanes and CORS-ADD datasets. The analysis covers both direct training and transfer learning with YOLOv8 and YOLOv9 architectures via Ultralytics. Detailed metrics and download links for each model are provided. You can also explore our models on [Hugging Face 🤗](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection).
 
 ## Updates
 
@@ -35,49 +34,48 @@ Explore and utilize these datasets to enhance your deep learning projects for ai
 
 ### HRPlanes
 
-<!-- <img src="https://raw.githubusercontent.com/RSandAI/HRPlanes/main/Assets/HRPlanes%20Samples%20All.png" alt="HRPlanes and CORS-ADD dataset samples"/> -->
+The HRPlanes dataset consists of high-resolution 4800x2703 RGB images sourced from Google Earth, featuring major airports like Paris-Charles de Gaulle, John F. Kennedy, and airports like Davis-Monthan Air Force Base. A total of 18,477 airplanes were manually annotated with bounding boxes using HyperLabel (now Plainsight), and the annotations were verified by independent analysts. 
 
-The imagery required for the dataset was obtained from Google Earth. We downloaded 4800x2703 sized 3101 RGB images from major airports around the world, such as Paris-Charles de Gaulle, John F. Kennedy, Frankfurt, Istanbul, Madrid, Dallas, Las Vegas, and Amsterdam, as well as aircraft boneyards like Davis-Monthan Air Force Base. The dataset images were manually annotated by creating bounding boxes for each airplane using the HyperLabel software, which still provides annotation services as [Plainsight](https://app.plainsight.ai/). Quality control of each label was conducted through visual inspection by independent analysts who were not involved in the labeling procedure. A total of 18,477 airplanes have been labeled. A sample image and corresponding minimum bounding boxes for airplanes can be seen in the figure below. The dataset has been approximately split as 70% (2170 images) for training, 20% (620 images) for validation, and 10% (311 images) for testing. In addition, you can access the repository of the dataset in [here](https://github.com/TolgaBkm/HRPlanes). For more details on the dataset, please refer to the original article: [A benchmark dataset for deep learning-based airplane detection: HRPlanes](https://dergipark.org.tr/tr/pub/ijeg/issue/77206/1107890#article_cite).
+The dataset is split into:
+- 70% (2,170 images) for training
+- 20% (620 images) for validation
+- 10% (311 images) for testing
 
-#### Download The Dataset
-
-The complete HRPlanes dataset is available in YOLO format. Access the dataset on [Zenodo](https://zenodo.org/records/14546832) to explore airplane annotations across various global airports.
-
-<br>
+The dataset is available in YOLO format on [Zenodo](https://zenodo.org/records/14546832).
 
 ### CORS-ADD Dataset
 
-The CORS-ADD dataset includes a diverse collection of images obtained from Google Earth and multiple satellites, such as WorldView-2, WorldView-3, Pleiades, Jilin-1, and IKONOS. A total of 7,337 images were manually annotated with horizontal bounding boxes (HBB) and oriented bounding boxes (OBB), resulting in 32,285 aircraft annotations. The dataset features a variety of scenes beyond aprons and runways, including aircraft carriers, oceans, and land with flying aircraft. It encompasses multiple types of aircraft, including civil aircraft, bombers, fighters, and early warning aircraft, with scales ranging from 4×4 to 240×240 pixels. 
+The CORS-ADD dataset includes 7,337 images from Google Earth and satellites like WorldView-2, WorldView-3, Pleiades, Jilin-1, and IKONOS, with 32,285 aircraft annotations using horizontal and oriented bounding boxes (HBB, OBB). It covers various scenes, from runways to aircraft carriers, featuring aircraft types such as civil planes, bombers, and fighters. 
 
-Using the validation split of the CORS-ADD-HBB subset, we evaluated our models' performance. The test results were derived from the three most successful models from separate YOLOv9 and YOLOv8 experiments, demonstrating high precision in detecting aircraft under varying conditions. For more details on the dataset, please refer to the original article: [Complex optical remote-sensing aircraft detection dataset and benchmark](https://ieeexplore.ieee.org/abstract/document/10144379).
+Model performance was evaluated on the CORS-ADD-HBB validation set, showing high precision in aircraft detection. For more details, refer to the original paper: [Complex Optical Remote-Sensing Aircraft Detection Dataset and Benchmark](https://ieeexplore.ieee.org/abstract/document/10144379).
 
 <br>
 
 ## Experimental Setup
 
-The experiments were conducted using an **[NVIDIA A100 40GB SXM](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/2-Training/GPU/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf)** GPU, which is equipped with 40GB of HBM2 memory and a memory bandwidth of 1,555 GB/s. This GPU supports 19.5 TFLOPS for both FP64 Tensor Core and FP32 computations and operates with a maximum thermal design power (TDP) of 400W. The training environment was set up on Google Colab, utilizing CUDA version 12.2 to leverage GPU acceleration for model training and evaluation tasks.
+Experiments were run on an **[NVIDIA A100 40GB SXM](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/nvidia-a100-datasheet-nvidia-us-2188504-web.pdf)** GPU with 40GB HBM2 memory, 1,555 GB/s bandwidth, and 19.5 TFLOPS (FP64/FP32). The training environment was set up on Google Colab using CUDA 12.2 for GPU acceleration.
 
 <br>
 
 ## Flowchart
 
-<img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/flow_chart.png" alt="Flow Chart"/>
+<p align="center">
+  <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/flow_chart.png" alt="Flow Chart" width="80%">
+</p>
 
-The flowchart outlines a structured approach for airplane detection using deep learning models. It consists of four main stages: [Preprocess](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/1-Pre-process), where HRPlanes data is prepared and hyperparameters are tuned; [Train and Evaluate](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training) Models, where YOLOv8 and YOLOv9 models are trained and compared; [Transfer Learning](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/3-Transfer%20Learning), which involves testing top-performing models on the CORS-ADD dataset to assess generalization; and [Comprehensive Inference](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/4-Comprehensive%20Inference), where models are validated on real-world satellite images to ensure reliability in various applications.
+_Figure 1. Flowchart of the article._
+
+The flowchart illustrates the structured approach for airplane detection using deep learning models. It includes four key stages:  
+1. **Preprocess** – Preparation of HRPlanes data and tuning of hyperparameters.  
+2. **Train and Evaluate Models** – Training and comparison of YOLOv8 and YOLOv9 models.  
+3. **Transfer Learning** – Testing top models on the CORS-ADD dataset for generalization.  
+4. **Comprehensive Inference** – Validating models on real-world satellite images for practical reliability.
 
 <br>
 
 ## 1. Preprocess  
 
-In this phase, we prepared the dataset for YOLO-based airplane detection by organizing images and labels into **train**, **validation**, and **test** sets. Each set contains **images/** (for `.jpg` files) and **labels/** (for `.txt` annotations).  
-
-We ensured proper dataset distribution by splitting data based on predefined lists (`train.txt`, `validation.txt`, `test.txt`). A histogram was generated to analyze bounding box distribution, helping identify variations in object density and potential annotation inconsistencies. Finally, all pre-processed data was validated and stored in Google Drive, ensuring readiness for model training.
-
-<br>
-
-### Access to the Details  
-
-For a comprehensive explanation of the dataset preparation, including file structuring, dataset splitting, and verification steps, please refer to the full documentation available in **[1-Preprocess](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/1-Pre-process).**
+In this phase, we organized the dataset for YOLO-based airplane detection into **train**, **validation**, and **test** sets, each containing images (`.jpg`) and annotations (`.txt`). Data was split using predefined lists (`train.txt`, `validation.txt`, `test.txt`). A histogram analyzed bounding box distribution to identify density variations and annotation issues. Finally, the pre-processed data was validated and stored in Google Drive for training readiness.
 
 <br>
 
@@ -85,49 +83,90 @@ For a comprehensive explanation of the dataset preparation, including file struc
 
 ### YOLOv8 Models
 
-The YOLOv8 models were extensively trained and evaluated on the **HRPlanes dataset** to understand their performance across various configurations. We employed three different variants of YOLOv8: **YOLOv8x**, **YOLOv8l**, and **YOLOv8s**, with training conducted under controlled conditions over **100 epochs**, a fixed learning rate of **0.001**, and a batch size of **16**. A total of **36 experiments** were executed, exploring a wide range of hyperparameter combinations including optimizers such as **SGD**, **Adam**, and **AdamW**. Additionally, the models were tested using different image resolutions (640x640 and 960x960) and augmentation techniques (e.g., adjustments to hue, saturation, value, and mosaic).
+The YOLOv8 models were trained and evaluated on the **HRPlanes dataset** with three variants: **YOLOv8x**, **YOLOv8l**, and **YOLOv8s**. Training was done for **100 epochs** with a learning rate of **0.001** and batch size of **16**, across **36 experiments**. We tested different optimizers (SGD, Adam, AdamW), image resolutions (640x640 and 960x960), and augmentation techniques (e.g., hue, saturation, mosaic). Models with **960x960 resolution** outperformed smaller ones, achieving mAP50-95 scores above **0.898**, with **AdamW** performing best for the larger variants, delivering top results in **mAP**, **precision**, and **recall**. The top six models, based on **mAP** and **F1 scores**, are available for further research.
 
-The results indicated that models trained with **960x960 resolution** consistently outperformed their smaller counterparts, achieving higher mAP50-95 scores, particularly surpassing a value of **0.898**. Among the optimizers, **AdamW** was found to be the most effective, particularly for the larger variants YOLOv8l and YOLOv8x, delivering the best performance in terms of **mAP**, **precision**, and **recall** while reducing false positives. The **top six models** from these experiments were selected based on a comprehensive analysis of **mAP** and **F1 scores**. These models were then made available for download, offering a benchmark for further research and application. For a complete overview of these models and their configurations, please refer to [Table 1](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training) for further details.
+<br>
+
+**Table 1. Table of Top 6 YOLOv8 Models Result.**
+
+| Experiment ID | Model    | Hyperparameters                                                                                   | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
+|----------|----------|---------------------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|------------------|
+| 12 | YOLOv8x  | Network size: 960x960<br>with Augmentation<br>Optimizer: SGD     | 0.9932   | 0.9915 | 0.9950 | 0.9939 | 0.8990 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-12) |
+| 32 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9930   | 0.9927 | 0.9933 | 0.9936 | 0.9025 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-32) |
+| 30 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: SGD     | 0.9922   | 0.9903 | 0.9940 | 0.9941 | 0.9021 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-30) |
+| 28 | YOLOv8l  | Network size: 960x960<br>with Augmentation<br>Optimizer: Adam    | 0.9921   | 0.9915 | 0.9928 | 0.9940 | 0.9018 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-28) |
+| 14 | YOLOv8x  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9920   | 0.9915 | 0.9924 | 0.9938 | 0.9020 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-14) |
+| 50 | YOLOv8s  | Network size: 960x960<br>with Augmentation<br>Optimizer: AdamW   | 0.9918   | 0.9934 | 0.9903 | 0.9940 | 0.8983 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-50) |
+
+**Note:** Augmentation parameters include Hue (0.015), Saturation (0.7), Value (0.4), and Mosaic (1). For experiments without augmentation, all parameters are set to 0.
+
+<br>
 
 ### YOLOv9e Models
 
-To assess potential improvements in performance, the **YOLOv9e** architecture was evaluated in parallel with YOLOv8, testing several optimizers and augmentation strategies. The experiments were conducted using a **640x640** resolution, consistent with the YOLOv8 trials for a fair comparison. Each model was trained for **100 epochs** under identical conditions (learning rate = 0.001, batch size = 16), allowing for an in-depth comparison of the two architectures.
+The **YOLOv9e** architecture was tested alongside YOLOv8, using a **640x640** resolution for a fair comparison. Models were trained for **100 epochs** under the same conditions (learning rate = 0.001, batch size = 16). YOLOv9e models performed competitively, with **SGD** and augmentation yielding the highest **F1 scores**, **precision**, and **recall**. Incorporating augmentation improved performance slightly, suggesting better generalization.
 
-Overall, YOLOv9e models achieved **competitive performance**, with **SGD** optimization and augmentation yielding the highest results in terms of **F1 Score**, **precision**, and **recall**. Notably, the YOLOv9e model with **augmentation** performed slightly better than the corresponding model without, suggesting that incorporating augmentation can enhance the generalization capabilities of the network. A detailed performance comparison of the YOLOv9e models can be found in [Table 2](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training).
+<br>
 
-### Generalization Using the CORS-ADD Dataset
+**Table 2. Comparison of YOLOv9e Models Result.**
 
-In addition to the primary experiments on the HRPlanes dataset, we conducted a evaluation using the **CORS-ADD dataset**. This evaluation tested how well the HRPlanes-trained models could generalize to a completely different dataset, without prior exposure to CORS-ADD data. The models were evaluated on the **CORS-ADD-HBB subset** using the **HBB annotation format**, and we focused on the top-performing YOLOv8 and YOLOv9e models.
+| Experiment ID | Hyperparameters                                                                       | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
+|----------|---------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|---------------|
+| 57 | Network size: 640x640<br>without Augmentation<br>Optimizer: SGD   | 0.9899 | 0.9912 | 0.9886 | 0.9935| 0.8982 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-57) |
+| 58 | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD      | 0.9917 | 0.9918 | 0.9916 | 0.9937| 0.8989 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-58) |
+| 59 | Network size: 640x640<br>without Augmentation<br>Optimizer: Adam  | 0.9882 | 0.9864 | 0.9900 | 0.9930| 0.8954 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-59) |
+| 60 | Network size: 640x640<br>with Augmentation<br>Optimizer: Adam     | 0.9889 | 0.9885 | 0.9894 | 0.9934| 0.8886 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-60) |
+| 61 | Network size: 640x640<br>without Augmentation<br>Optimizer: AdamW | 0.9880 | 0.9864 | 0.9896 | 0.9930| 0.8954 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-61) |
+| 62 | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW    | 0.9899 | 0.9891 | 0.9907 | 0.9936| 0.8930 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/training/experiment-62) |
 
-The results demonstrated that the models retained their performance capabilities when applied to new data, exhibiting **high precision** and **robust detection** capabilities across different conditions. Notably, the **YOLOv8x** model with the **SGD optimizer** emerged as the most effective configuration in this cross-dataset evaluation, outperforming other models in terms of **F1 score**, **precision**, and **mAP**.  For a detailed performance breakdown of the top YOLOv8 and YOLOv9e models on the CORS-ADD dataset, please refer to [Tables 3 and 4](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training).
+This figure illustrates the performance of both models across various aircraft types and challenging conditions. YOLOv8x predictions closely align with ground truth, exhibiting high precision with fewer false positives and negatives. The YOLOv9e predictions are also effective but show subtle differences in bounding box placement, particularly in edge cases. This highlights the generalization capabilities of both models while revealing slight performance differences.
+
+<br>
+
+<p align="center">
+  <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/gt_v8_v9_cropped.png" alt="HRPlanes and CORS-ADD Dataset Samples" width="80%">
+</p>
+
+
+_Figure 2. HRPlanes and CORS-ADD dataset samples._
 
 <br>
 
 ### Access to the Details
 
-For those interested in a deeper analysis, all experimental configurations, results, and detailed performance metrics have been documented and made available through a comprehensive **[spreadsheet of experiment results](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/2-Training/Experiments.xlsx)**. This document contains all the specifics of the experiments conducted, including model hyperparameters, optimizer settings, and corresponding performance metrics, offering full transparency into the experimental process. Here you can find all the details about the training process: **[2-Training](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/2-Training).**
+For those interested in a deeper analysis, all experimental configurations, results, and detailed performance metrics have been documented and made available through a comprehensive **[spreadsheet of experiment results](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/Experiments.xlsx)**. This document contains all the specifics of the experiments conducted, including model hyperparameters, optimizer settings, and corresponding performance metrics, offering full transparency into the experimental process.
 
 <br>
 
 ## 3. Transfer Learning Using CORS-ADD Dataset
 
-In this section, we explore the use of **transfer learning** to enhance the generalization capability of our models, specifically for **aircraft detection** using the CORS-ADD dataset. Transfer learning allows us to take advantage of previously trained models on the HRPlanes dataset and fine-tune them for optimal performance on the CORS-ADD dataset, which contains different characteristics and challenges.
+This section explores **transfer learning** to enhance the generalization of our models for **aircraft detection** on the CORS-ADD dataset. By fine-tuning pre-trained models from the HRPlanes dataset, we aimed to adapt them to the unique characteristics and challenges of CORS-ADD.
 
 ### Methodology
 
-We selected the top three models from the previous training experiments and performed **transfer learning** by retraining them for **20 epochs** on the **CORS-ADD training set**. This approach ensured that the models retained their learned features from the initial dataset while adapting to the new dataset’s unique features. We evaluated the performance of each model using the **CORS-ADD validation data**, focusing on key metrics such as **F1 score**, **precision**, **recall**, **mAP50**, and **mAP50-95**.
+We selected the top three models from previous experiments and fine-tuned them for **20 epochs** on the **CORS-ADD training set**. This allowed the models to retain features learned from HRPlanes while adapting to CORS-ADD’s distinct characteristics. Model performance was evaluated on the **CORS-ADD validation set**, using metrics like **F1 score**, **precision**, **recall**, **mAP50**, and **mAP50-95**.
 
 ### Results
 
-The transfer learning experiments led to significant improvements in model performance across all metrics. For instance, the **YOLOv8x** model, initially trained on HRPlanes, saw an **11.3% improvement** in **F1 score** (from 0.8167 to 0.9333), along with substantial increases in **precision** (+6.0%), **recall** (+22.1%), and **mAP50** (+12.6%). Similarly, the **YOLOv9e** model, with the SGD optimizer and data augmentation, exhibited a **15.0% increase** in **F1 score**, as well as notable gains in **precision** (+5.4%) and **recall** (+24.3%). 
+**Table 3. Performance Results of Top 3 YOLOv8 Models on the CORS-ADD Dataset Using Transfer Learning**
 
-These results demonstrate that **transfer learning** effectively boosts model performance by leveraging prior knowledge while adapting to new, domain-specific datasets.
+| Experiment ID | Model   | Hyperparameters                                                                       | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
+|----------|---------|---------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|---------------|
+| 12 | YOLOv8x | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9333 | 0.9579 | 0.9100 | 0.9503| 0.5931 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-12) |
+| 32 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW | 0.9250 | 0.9499 | 0.9013 | 0.9425| 0.5678 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-32) |
+| 30 | YOLOv8l | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD   | 0.9352 | 0.9586 | 0.9130 | 0.9505| 0.5824 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-30) |
 
 <br>
 
-### Access to the Details
+**Table 4. Performance Results of Top 3 YOLOv9e Models on the CORS-ADD Dataset Using Transfer Learning**
 
-To examine the detailed experimental setup, model configurations, and complete results of the transfer learning process, please refer to the full documentation available in the **[3-Transfer Learning](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/3-Transfer%20Learning).**
+| Experiment ID | Model   | Hyperparameters                                                                       | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Weights |
+|----------|---------|---------------------------------------------------------------------------------------|----------|-----------|--------|-------|----------|---------------|
+| 58 | YOLOv9e | Network size: 640x640<br>with Augmentation<br>Optimizer: SGD    | 0.9392 | 0.9560 | 0.9230 | 0.9526| 0.5942 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-58) |
+| 57 | YOLOv9e | Network size: 640x640<br>without Augmentation<br>Optimizer: SGD | 0.9304 | 0.9494 | 0.9121 | 0.9471| 0.5773 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-57) |
+| 62 | YOLOv9e | Network size: 640x640<br>with Augmentation<br>Optimizer: AdamW  | 0.9088 | 0.9452 | 0.8751 | 0.9255| 0.5239 | [Download](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection/tree/main/transfer-learning/experiment-62) |
+
+Transfer learning significantly boosted performance across all metrics. For example, the **YOLOv8x** model saw an **11.3% increase** in **F1 score** (from 0.8167 to 0.9333), along with gains in **precision** (+6.0%), **recall** (+22.1%), and **mAP50** (+12.6%). Similarly, the **YOLOv9e** model with **SGD optimizer** and **data augmentation** showed a **15.0% improvement** in **F1 score**, and increases in **precision** (+5.4%) and **recall** (+24.3%).
 
 <br>
 
@@ -145,18 +184,53 @@ The **YOLOv8x model**, previously trained on the HRPlanes dataset, was utilized 
 
 <br>
 
+**Table 5. Top 6 Results of the Comprehensive Inference**
+
+| Exp. No | IATA/ICAO Code | Image Level | Network Size | Number of Airplanes (GT) | Number of Airplanes (Inference) | F1 Score | Precision | Recall | mAP50 | mAP50-95 | Inference Time (as ms) |
+|---------|-----------------|-------------|--------------|--------------------------|---------------------------------|----------|-----------|--------|-------|----------|----------|
+| 32      | PEK/ZBAA        | 2           | 960x960      | 31                       | 31                              | 0.9992   | 0.9984    | 1      | 0.995 | 0.7854   | 605.2 |
+| 34      | PEK/ZBAA        | 1           | 1280x1280    | 31                       | 30                              | 0.9991   | 1         | 0.9982 | 0.995 | 0.7741   | 307.0 |
+| 25      | AMS/EHAM        | 1           | 1280x1280    | 74                       | 74                              | 0.9931   | 0.9862    | 1      | 0.9947 | 0.8303   | 300.1 |
+| 6       | ORD/KORD        | 3           | 960x960      | 131                      | 126                             | 0.9876   | 1         | 0.9754 | 0.9911 | 0.8044   | 2096.0 |
+| 13      | HND/RJTT        | 1           | 960x960      | 61                       | 60                              | 0.9899   | 0.9963    | 0.9836 | 0.9944 | 0.7617   | 202.0 |
+| 17      | HND/RJTT        | 2           | 1280x1280    | 64                       | 61                              | 0.9837   | 1         | 0.9678 | 0.9833 | 0.8113   | 1036.4 |
+
+
+*Note: Full results are provided for all experiments, capturing the impact of image, resolution, and model input size on airplane detection accuracy.*
+
+<br>
+
+**Figure 3** illustrates the results of airplane detection at Chicago O'Hare International Airport (ORD/KORD) using the YOLOv8x model with a 960x960 pixel network input size. The analysis is performed across three levels of image granularity: Level 1 (a), Level 2 (b), and Level 3 ( c). In **Figure 4**, we developed a CAM-like heatmap for airplane detection using YOLO-based object tracking. Instead of traditional Class Activation Maps, we created radial gradient masks centered on tracked airplane bounding boxes. These were accumulated over time to generate a spatiotemporal heatmap, which, when blended with original frames, visualizes high-activity zones without requiring access to model internals.
+
+<div align="center">
+  <table style="border-collapse: collapse; border: none; width: 920px;">
+    <tr>
+      <td style="border: none; text-align: center; width: 50%;">
+        <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/Comprehensive_Inference_ORD_zoom_in_1.png" style="max-width: 100%; height: auto;" alt="Comprehensive Inference for Large Input Images"/>
+      </td>
+      <td style="border: none; text-align: center; width: 50%;">
+        <img src="https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/Comprehensive_Inference_Heatmap_ORD_zoom_in_1.png" style="max-width: 100%; height: auto;" alt="Comprehensive Inference Heatmap"/>
+      </td>
+    </tr>
+    <tr>
+      <td style="border: none; text-align: center;">
+        <em>Figure 3 — Airplane detection at Chicago O'Hare (ORD) with YOLOv8x using 960×960 input across three image scales (Levels 1–3).</em>
+      </td>
+      <td style="border: none; text-align: center;">
+        <em>Figure 4 — Zoomed-in heatmap view revealing localized airplane activity with higher spatial clarity across three image scales (Levels 1–3).</em>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br>
+
 ### Access to the Details
 
-For a more detailed look at the experimental setup, performance results, and the impact of image resolution and granularity on airplane detection accuracy, please refer to the full documentation available in the **[4-Comprehensive Inference](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/tree/main/4-Comprehensive%20Inference)**.
+We conducted 36 experiments to assess the model’s efficacy, varying image resolution, architecture, and network size. Each experiment aimed to identify the best configuration for airplane detection in satellite imagery. **For detailed results, please refer to the [Experiments Spreadsheet](https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection/blob/main/assets/Inference%20Results.xlsx).**
 
 <br>
 
 ## Citation
 
 If this dataset or model weights benefit your research, please cite our paper (DOI: [10.1016/j.engappai.2025.111854](https://doi.org/10.1016/j.engappai.2025.111854)).
-
-<br>
-
-## Copyright
-
-The dataset and images are available for academic use only, adhering to [Google Earth’s terms](https://about.google/brand-resource-center/products-and-services/geo-guidelines/).
