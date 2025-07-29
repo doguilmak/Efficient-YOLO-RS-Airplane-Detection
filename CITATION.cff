@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Exploring You Only Look Once v8 and v9 for efficient airplane detection in very high resolution remote sensing imagery"
+authors:
+  - family-names: İlmak
+    given-names: Doğu
+  - family-names: Bakirman
+    given-names: Tolga
+  - family-names: Sertel
+    given-names: Elif
+date-released: 2025-01-01
+version: "1.0"
+doi: 10.1016/j.engappai.2025.111854
+url: https://www.sciencedirect.com/science/article/pii/S0952197625018561
+repository-code: https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection
+keywords:
+  - Airplane detection
+  - Deep learning
+  - You Only Look Once
+  - Transfer learning
+  - Optimization
+license: "Other"
+type: article
+journal:
+  name: Engineering Applications of Artificial Intelligence
+  volume: 160
+  pages: 111854
+abstract: >
+  Automatic airplane detection from satellite images using deep learning methods produces valuable geospatial information for a wide range of applications, including aviation safety, defence, airport and disaster management. You Only Look Once (YOLO) models have been widely used for various geospatial tasks; however, their application to airplane detection in very high-resolution (VHR) remote sensing imagery, particularly YOLOv8 and YOLOv9, remains underexplored. This study aims to assess the performance of YOLOv8 and YOLOv9 architectures in the context of airplane detection using High Resolution Planes (HRPlanes) dataset. First, we examine the impact of various hyperparameters on the performance of YOLOv8 models to propose optimal hyperparameter and model variant combinations. Second, we compare the best-performing YOLOv8 configurations with their YOLOv9 counterparts to evaluate potential improvements. Third, we assess the generalizability and transferability of the top-performing models by testing them across independent airplane detection datasets. Lastly, we perform an operational assessment of inference performance by analyzing trade-offs between network size, input image resolution and processing time. The optimal performance was achieved with the YOLOv8x model using 960x960 network size and data augmentation, resulting in 98.99 % F1-Score, 99.12 % Precision, 98.86 % Recall, 99.35 % Mean Average Precision (mAP)50, and 89.82 % mAP50-95. YOLOv9e achieved comparable performance with fewer parameters (57.3 vs. 68.2 million) and lower computational cost (189.0 vs. 257.8 giga floating point operations per second (GFLOPS)), offering up to a 27 % reduction in computational cost. These findings highlight the practical potential of both YOLOv8 and YOLOv9 for high-precision airplane detection in VHR remote sensing imagery. The HRPlanes dataset and model weights are publicly available at: https://github.com/RSandAI/Efficient-YOLO-RS-Airplane-Detection.
