@@ -233,4 +233,24 @@ We conducted 36 experiments to assess the model’s efficacy, varying image reso
 
 ## Citation
 
-If this dataset or model weights benefit your research, please cite our paper (DOI: [10.1016/j.engappai.2025.111854](https://doi.org/10.1016/j.engappai.2025.111854)).
+If you use this dataset or the associated model weights in your research or applications, please cite the following publication:
+
+**Doğu İlmak**, **Tolga Bakirman**, **Elif Sertel**  
+*[Exploring You Only Look Once v8 and v9 for efficient airplane detection in very high resolution remote sensing imagery](https://www.sciencedirect.com/science/article/pii/S0952197625018561)*  
+**Engineering Applications of Artificial Intelligence**, Volume 160, 2025, Article 111854  
+https://doi.org/10.1016/j.engappai.2025.111854
+
+### BibTeX:
+```bibtex
+@article{ILMAK2025111854,
+  title     = {Exploring You Only Look Once v8 and v9 for efficient airplane detection in very high resolution remote sensing imagery},
+  journal   = {Engineering Applications of Artificial Intelligence},
+  volume    = {160},
+  pages     = {111854},
+  year      = {2025},
+  issn      = {0952-1976},
+  doi       = {10.1016/j.engappai.2025.111854},
+  url       = {https://www.sciencedirect.com/science/article/pii/S0952197625018561},
+  author    = {Doğu İlmak and Tolga Bakirman and Elif Sertel},
+  keywords  = {Airplane detection, Deep learning, You Only Look Once, Transfer learning, Optimization}
+}
