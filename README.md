@@ -2,6 +2,7 @@
 
 <br>
 
+
 This repository provides weights and evaluation metrics for YOLO models trained on high-resolution satellite imagery for airplane detection using the HRPlanes and CORS-ADD datasets. The analysis covers both direct training and transfer learning with YOLOv8 and YOLOv9 architectures via Ultralytics. Detailed metrics and download links for each model are provided. You can also explore our models on [Hugging Face 🤗](https://huggingface.co/iturslab/Efficient-YOLO-RS-Airplane-Detection).
 
 ## Updates
@@ -254,3 +255,4 @@ https://doi.org/10.1016/j.engappai.2025.111854
   author    = {Doğu İlmak and Tolga Bakirman and Elif Sertel},
   keywords  = {Airplane detection, Deep learning, You Only Look Once, Transfer learning, Optimization}
 }
+
