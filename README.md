@@ -237,8 +237,13 @@ If you use this dataset or the associated model weights in your research or appl
 
 **Doğu İlmak**, **Tolga Bakirman**, **Elif Sertel**  
 *[Exploring You Only Look Once v8 and v9 for efficient airplane detection in very high resolution remote sensing imagery](https://www.sciencedirect.com/science/article/pii/S0952197625018561)*  
+
+<br>
+
 **Engineering Applications of Artificial Intelligence**, Volume 160, 2025, Article 111854  
 https://doi.org/10.1016/j.engappai.2025.111854
+
+<br>
 
 ### BibTeX:
 ```bibtex
